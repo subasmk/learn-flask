@@ -10,6 +10,9 @@ def index(name = None):#we should give none if we use keyword to avoid error
 @app.route("/vannako")
 def vanako():
     return "vannakam"
+@app.route("/contact")
+def msg():
+    return render_template("contact.html")
 @app.route("/user/<name>")#to get value at run time <>
 def user(name):
     return f"\n hello\t{name}"
